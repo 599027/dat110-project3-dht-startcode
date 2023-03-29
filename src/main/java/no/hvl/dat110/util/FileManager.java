@@ -57,7 +57,9 @@ public class FileManager {
 	}
 	
 	public void createReplicaFiles() {
-	 	
+		for(int i=0; i<numReplicas; i++){
+			replicafiles[i] = Hash.hashOf(filename + i);
+		}
 		// set a loop where size = numReplicas
 		
 		// replicate by adding the index to filename
